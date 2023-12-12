@@ -39,11 +39,6 @@ All steps in WSL Ubuntu terminal.
 
 1. Build MLIR-AIE tools under WSL2 following regular get started instructions [https://xilinx.github.io/mlir-aie/Building.html](https://xilinx.github.io/mlir-aie/Building.html)
 
-1. After building the MLIR-AIE tools copy the base XCLBIN to the data directory in the installation:
-    ```
-    cp /mnt/c/Windows/System32/AMD/1x4.xclbin (youPathToMLIR-AIE)/install/data
-    ```
-
 1. After installing the updated RyzenAI driver (see next subsection), use the gendef tool (from the mingw-w64-tools package) to create a .def file with the symbols:
     ```
     mkdir /mnt/c/Technical/xrtIPUfromDLL; cd /mnt/c/Technical/xrtIPUfromDLL
@@ -76,7 +71,7 @@ All steps in Win11 (powershell where needed).
 
 ## Build a Design
 
-For your design of interest, for instance [add_one_objFifo](../test/ipu-xrt/add_one_objFifo/), 2 steps are needed: (i) build the AIE desgin in WSL and then (ii) build the host code in powershell.
+For your design of interest, for instance [add_one_objFifo](../reference_designs/ipu-xrt/add_one_objFifo/), 2 steps are needed: (i) build the AIE desgin in WSL and then (ii) build the host code in powershell.
 
 ### Build device AIE part: WSL Ubuntu terminal
 1. Prepare your enviroment with the mlir-aie tools (build during Prerequisites part of this guide)
